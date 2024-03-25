@@ -7,10 +7,10 @@ import (
 
 	"github.com/Azure/azure-sdk-for-go/profiles/latest/privatedns/mgmt/privatedns"
 	"github.com/gruntwork-io/terratest/modules/terraform"
-	"github.com/nexient-llc/lcaf-component-terratest-common/lib/azure/configure"
-	"github.com/nexient-llc/lcaf-component-terratest-common/lib/azure/dns"
-	"github.com/nexient-llc/lcaf-component-terratest-common/lib/azure/login"
-	"github.com/nexient-llc/lcaf-component-terratest-common/types"
+	"github.com/launchbynttdata/lcaf-component-terratest/lib/azure/configure"
+	"github.com/launchbynttdata/lcaf-component-terratest/lib/azure/dns"
+	"github.com/launchbynttdata/lcaf-component-terratest/lib/azure/login"
+	"github.com/launchbynttdata/lcaf-component-terratest/types"
 	"github.com/stretchr/testify/assert"
 )
 
