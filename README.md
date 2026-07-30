@@ -103,19 +103,13 @@ If `make check` target is successful, developer is good to commit the code to pr
 - runs `conftests`. `conftests` make sure `policy` checks are successful.
 - runs `terratest`. This is integration test suit.
 - runs `opa` tests
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.117.0 |
 
 ## Modules
 
@@ -133,18 +127,18 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_a_records"></a> [a\_records](#input\_a\_records) | A list of A records to create | <pre>map(object({<br>    name                = string<br>    resource_group_name = string<br>    zone_name           = string<br>    ttl                 = number<br>    records             = list(string)<br>    tags                = optional(map(string))<br>  }))</pre> | `{}` | no |
-| <a name="input_cname_records"></a> [cname\_records](#input\_cname\_records) | A list of A records to create | <pre>map(object({<br>    name                = string<br>    resource_group_name = string<br>    zone_name           = string<br>    ttl                 = number<br>    record              = optional(string)<br>    tags                = optional(map(string))<br>  }))</pre> | `{}` | no |
-| <a name="input_txt_records"></a> [txt\_records](#input\_txt\_records) | A list of A records to create | <pre>map(object({<br>    name                = string<br>    resource_group_name = string<br>    zone_name           = string<br>    ttl                 = number<br>    records             = list(string)<br>    tags                = optional(map(string))<br>  }))</pre> | `{}` | no |
+| <a name="input_a_records"></a> [a\_records](#input\_a\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    records             = list(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
+| <a name="input_cname_records"></a> [cname\_records](#input\_cname\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    record              = optional(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
+| <a name="input_txt_records"></a> [txt\_records](#input\_txt\_records) | A list of A records to create | <pre>map(object({<br/>    name                = string<br/>    resource_group_name = string<br/>    zone_name           = string<br/>    ttl                 = number<br/>    records             = list(string)<br/>    tags                = optional(map(string))<br/>  }))</pre> | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_a_record_ids"></a> [a\_record\_ids](#output\_a\_record\_ids) | The DNS A Record IDs. |
 | <a name="output_a_record_fqdns"></a> [a\_record\_fqdns](#output\_a\_record\_fqdns) | The FQDNs of the DNS A Records. |
-| <a name="output_cname_record_ids"></a> [cname\_record\_ids](#output\_cname\_record\_ids) | The DNS CNAME Record IDs. |
+| <a name="output_a_record_ids"></a> [a\_record\_ids](#output\_a\_record\_ids) | The DNS A Record IDs. |
 | <a name="output_cname_record_fqdns"></a> [cname\_record\_fqdns](#output\_cname\_record\_fqdns) | The FQDNs of the DNS CNAME Records. |
-| <a name="output_txt_record_ids"></a> [txt\_record\_ids](#output\_txt\_record\_ids) | The DNS TXT Record IDs. |
+| <a name="output_cname_record_ids"></a> [cname\_record\_ids](#output\_cname\_record\_ids) | The DNS CNAME Record IDs. |
 | <a name="output_txt_record_fqdns"></a> [txt\_record\_fqdns](#output\_txt\_record\_fqdns) | The FQDNs of the DNS TXT Records. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+| <a name="output_txt_record_ids"></a> [txt\_record\_ids](#output\_txt\_record\_ids) | The DNS TXT Record IDs. |
+<!-- END_TF_DOCS -->

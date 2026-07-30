@@ -38,5 +38,5 @@ func TestDnsZoneRecordsModule(t *testing.T) {
 		}).
 		Build()
 
-	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestDnsZoneRecords)
+	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestComposableDnsZoneRecords)
 }
