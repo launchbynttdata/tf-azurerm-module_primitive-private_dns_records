@@ -23,7 +23,7 @@ var (
 	dnsZoneRecordSetsClient *armprivatedns.RecordSetsClient
 )
 
-func TestDnsZoneRecords(t *testing.T, ctx types.TestContext) {
+func TestComposableDnsZoneRecords(t *testing.T, ctx types.TestContext) {
 	subscriptionID := os.Getenv("ARM_SUBSCRIPTION_ID")
 	if subscriptionID == "" {
 		t.Fatalf("ARM_SUBSCRIPTION_ID must be set for acceptance tests")
