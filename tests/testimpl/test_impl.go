@@ -54,10 +54,10 @@ func checkDNSZoneRecordSets(t *testing.T, dnsZoneRecordSetsClient *armprivatedns
 }
 
 func checkRecord(t *testing.T, dnsZoneRecordSetsClient *armprivatedns.RecordSetsClient, terraformOptions *terraform.Options, recordSetIdsKey string, recordSetFQDNsKey string, recordType armprivatedns.RecordType) {
-	resourceGroupName := terraform.Output(t, terraformOptions, "resource_group_name")
-	zoneName := terraform.Output(t, terraformOptions, "private_dns_zone_name")
-	recordSetIds := terraform.OutputMap(t, terraformOptions, recordSetIdsKey)
-	recordSetFQDNs := terraform.OutputMap(t, terraformOptions, recordSetFQDNsKey)
+	resourceGroupName := terraform.OutputContext(t, context.Background(), terraformOptions, "resource_group_name")
+	zoneName := terraform.OutputContext(t, context.Background(), terraformOptions, "private_dns_zone_name")
+	recordSetIds := terraform.OutputMapContext(t, context.Background(), terraformOptions, recordSetIdsKey)
+	recordSetFQDNs := terraform.OutputMapContext(t, context.Background(), terraformOptions, recordSetFQDNsKey)
 	options := armprivatedns.RecordSetsClientGetOptions{}
 
 	for key, recordSetId := range recordSetIds {
